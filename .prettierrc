@@ -1,0 +1,29 @@
+{
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "tabWidth": 2,
+        "singleQuote": true,
+        "useTabs": true,
+        "trailingComma": "all",
+        "semi": true,
+        "printWidth": 92,
+        "eslint.format.enable": true
+      }
+    },
+    {
+      "files": ["**/test/**/*.ts", "**/*.test.ts"],
+      "options": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    },
+    {
+      "files": "*.sol",
+      "options": {
+        "tabWidth": 4,
+        "printWidth": 100
+      }
+    }
+  ]
+}
