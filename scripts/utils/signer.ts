@@ -1,6 +1,6 @@
 import hre, { ethers } from 'hardhat';
 import { toWei } from '../common';
-import { GeniusOwnershipFacet } from '../../typechain-types';
+import { ExampleOwnershipFacet } from '../../typechain-types';
 import { debuglog } from 'util';
 
 /**

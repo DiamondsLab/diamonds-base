@@ -1,0 +1,25 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ExampleDiamond",
+  "sourceName": "diamond-abi/ExampleDiamond.sol",
+  "abi": [],
+  "bytecode": "",
+  "deployedBytecode": "",
+  "linkReferences": {},
+  "deployedLinkReferences": {},
+  "_diamondMetadata": {
+    "generatedAt": "2025-08-09T18:40:18.544Z",
+    "diamondName": "ExampleDiamond",
+    "networkName": "hardhat",
+    "chainId": 31337,
+    "selectorMap": {},
+    "stats": {
+      "totalFunctions": 0,
+      "totalEvents": 0,
+      "totalErrors": 0,
+      "facetCount": 4,
+      "duplicateSelectorsSkipped": 0
+    }
+  },
+  "metadata": "{\"compiler\":\"diamond-abi-generator\",\"generatedAt\":\"2025-08-09T18:40:18.544Z\",\"networkName\":\"hardhat\",\"chainId\":31337,\"selectorMap\":{},\"stats\":{\"totalFunctions\":0,\"totalEvents\":0,\"totalErrors\":0,\"facetCount\":4,\"duplicateSelectorsSkipped\":0}}"
+}

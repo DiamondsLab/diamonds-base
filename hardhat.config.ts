@@ -18,8 +18,8 @@ dotenv.config();
  * These variables are fetched from the `.env` file to avoid hardcoding sensitive data.
  * - HH_CHAIN_ID: Custom chain ID for the Hardhat network (default is 31337 if not set).
  * - DEPLOYER_PRIVATE_KEY: Private key of the deployer account.
- * - SEPOLIA_RPC: RPC URL for the Sepolia network.
  * - ETHEREUM_RPC: RPC URL for the Ethereum network.
+ * - SEPOLIA_RPC: RPC URL for the Sepolia network.
  * - POLYGON_RPC: RPC URL for the Polygon network.
  * - AMOY_RPC: RPC URL for the Amoy network.
  * - ETH_BLOCK: Block number for the Ethereum network.
@@ -29,14 +29,18 @@ dotenv.config();
  */
 const {
 	HH_CHAIN_ID,
-	SEPOLIA_RPC,
 	MAINNET_RPC,
-	POLYGON_RPC,
-	POLYGON_AMOY_RPC,
 	MAINNET_BLOCK,
-	POLYGON_BLOCK,
-	POLYGON_AMOY_BLOCK,
+	SEPOLIA_RPC,
 	SEPOLIA_BLOCK,
+	POLYGON_RPC,
+	POLYGON_BLOCK,
+	POLYGON_AMOY_RPC,
+	POLYGON_AMOY_BLOCK,
+  ARBITRUM_RPC,
+  ARBITRUM_BLOCK,
+  ARBITRUM_SEPOLIA_RPC,
+  ARBITRUM_SEPOLIA_BLOCK,
 	BASE_RPC,
 	BASE_BLOCK,
 	BASE_SEPOLIA_RPC,
@@ -49,16 +53,20 @@ const {
 } = process.env;
 
 // default blank RPC URLs will return an error. Must be configured in the .env file.
+// default block values as well so missing environment variables set default to latest block.
 export const mainnetUrl: string = MAINNET_RPC || ''; // Ethereum RPC URL
 export const polygonUrl: string = POLYGON_RPC || ''; // Polygon RPC URL
 export const polygonAmoyUrl: string = POLYGON_AMOY_RPC || ''; // Amoy RPC URL
 export const sepoliaUrl: string = SEPOLIA_RPC || ''; // Sepolia RPC URL
+export const sepoliaBlock: number = parseInt(SEPOLIA_BLOCK || '0'); // Sepolia block number
+export const arbitrumUrl: string = ARBITRUM_RPC || ''; // Arbitrum RPC URL
+export const arbitrumBlock: number = parseInt(ARBITRUM_BLOCK || '0'); // Arbitrum block number
+export const arbitrumSepoliaUrl: string = ARBITRUM_SEPOLIA_RPC || ''; // Arbitrum Sepolia RPC URL
+export const arbitrumSepoliaBlock: number = parseInt(ARBITRUM_SEPOLIA_BLOCK || '0'); // Arbitrum Sepolia block number
 export const baseUrl: string = BASE_RPC || ''; // Base RPC URL
-// These set default values as well so missing environment variables set default to latest block.
 export const mainnetBlock: number = parseInt(MAINNET_BLOCK || '0'); // Ethereum block number
 export const polygonBlock: number = parseInt(POLYGON_BLOCK || '0'); // Polygon block number
 export const amoyBlock: number = parseInt(POLYGON_AMOY_BLOCK || '0'); // Amoy block number
-export const sepoliaBlock: number = parseInt(SEPOLIA_BLOCK || '0'); // Sepolia block number
 export const baseBlock: number = parseInt(BASE_BLOCK || '0'); // Base block number
 export const baseSepoliaUrl: string = BASE_SEPOLIA_RPC || ''; // Base Sepolia RPC URL
 export const baseSepoliaBlock: number = parseInt(BASE_SEPOLIA_BLOCK || '0'); // Base Sepolia block number
@@ -166,6 +174,14 @@ const config: HardhatUserConfig = {
 			hardhat: {
 				rpcUrl: multichainHardhat,
 			},
+      arbitrum: {
+        rpcUrl: arbitrumUrl,
+        blockNumber: arbitrumBlock,
+      },
+      arbitrum_sepolia: {
+        rpcUrl: arbitrumSepoliaUrl,
+        blockNumber: arbitrumSepoliaBlock,
+      },
 			base: {
 				rpcUrl: baseUrl,
 				blockNumber: baseBlock,
@@ -245,16 +261,16 @@ const config: HardhatUserConfig = {
 			accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
 			timeout: 100000,
 		},
-		arbitrum_sepolia: {
-		  url: arbitrumSepoliaUrl,
-		  chainId: 421614,
-		  accounts: [process.env.PRIVATE_KEY || ''],
-		},
-		arbitrum: {
-			url: arbitrumUrl,
-			chainId: 42161,
-			accounts: [process.env.PRIVATE_KEY || ''],
-		},
+    arbitrum: {
+      url: arbitrumUrl,
+      chainId: 42161,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
+    arbitrum_sepolia: {
+      url: arbitrumSepoliaUrl,
+      chainId: 421614,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
 		base_sepolia: {
 			url: baseSepoliaUrl,
 			chainId: 84532,

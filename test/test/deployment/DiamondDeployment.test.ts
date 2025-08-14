@@ -8,7 +8,7 @@ import { multichain } from 'hardhat-multichain';
 
 // Type alias for provider compatibility
 type ProviderType = JsonRpcProvider | any;
-import { getInterfaceID } from '../../scripts/utils/helpers';
+import { getInterfaceID } from '../../utils/helpers';
 import {
 	LocalDiamondDeployer,
 	LocalDiamondDeployerConfig,
@@ -20,7 +20,7 @@ import {
 	IDiamondLoupe__factory,
 } from '../../typechain-types';
 import { ExampleDiamond } from '../../diamond-typechain-types';
-import { loadDiamondContract } from '../../scripts/utils/loadDiamondArtifact';
+import { loadDiamondContract } from '../../utils/loadDiamondArtifact';
 
 describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () {
 	const diamondName = 'ExampleDiamond';

@@ -308,7 +308,7 @@ export class ProjectDiamondAbiGenerator {
           // Try to load the contract artifact
           const artifactPaths = [
             `./artifacts/contracts/${facetName}.sol/${facetName}.json`,
-            `./artifacts/contracts/${this.diamond.contractsPath}/${facetName}.sol/${facetName}.json`,
+            `./artifacts/contracts/${this.diamond!.contractsPath}/${facetName}.sol/${facetName}.json`,
             `./artifacts/@gnus.ai/contracts-upgradeable-diamond/contracts/${facetName}.sol/${facetName}.json`
           ];
 

@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { rmSync, existsSync } from 'fs';
 import { join } from 'path';
-import { DiamondAbiGenerationOptions, generateDiamondAbi, ProjectDiamondAbiGenerator } from '../../scripts/diamond-abi-generator';
+import { DiamondAbiGenerationOptions, generateDiamondAbi, ProjectDiamondAbiGenerator } from '../../diamond-abi-generator';
 
 describe('Diamond ABI Generator', () => {
   const testOutputDir = './test-output/diamond-abi';

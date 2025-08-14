@@ -1,6 +1,5 @@
 import { expect } from "chai";
-import { RPCDiamondDeployer } from "../../../scripts/setup/RPCDiamondDeployer";
-import hre from "hardhat";
+import { RPCDiamondDeployer } from "../../../../scripts/setup/RPCDiamondDeployer";
 import 'hardhat-diamonds';
 
 describe("RPCDiamondDeployer - Hardhat Integration", function () {
