@@ -2,7 +2,7 @@
 
 /**
  * Main deployment script for OpenZeppelin Defender
- * Deploys Diamond contracts using DefenderDiamondDeployer
+ * Deploys GNUS.AI Diamond contracts using DefenderDiamondDeployer
  */
 
 import { DefenderDiamondDeployer, DefenderDiamondDeployerConfig } from '../../setup/DefenderDiamondDeployer';
@@ -29,7 +29,7 @@ async function main(): Promise<void> {
 
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const diamondName = args[0] || 'ExampleDiamond';
+  const diamondName = args[0] || 'GeniusDiamond';
   const networkName = args[1] || hre.network.name;
 
   // Validate network
@@ -129,7 +129,7 @@ function showUsage(): void {
   console.log('Usage: npx ts-node scripts/deploy/deploy-defender.ts [DIAMOND_NAME] [NETWORK_NAME]');
   console.log('');
   console.log('Arguments:');
-  console.log('  DIAMOND_NAME    Name of the diamond to deploy (default: ExampleDiamond)');
+  console.log('  DIAMOND_NAME    Name of the diamond to deploy (default: GeniusDiamond)');
   console.log('  NETWORK_NAME    Target network name (default: current network)');
   console.log('');
   console.log('Environment Variables:');
@@ -145,7 +145,7 @@ function showUsage(): void {
   console.log('');
   console.log('Examples:');
   console.log('  npx ts-node scripts/deploy/deploy-defender.ts');
-  console.log('  npx ts-node scripts/deploy/deploy-defender.ts ExampleDiamond polygon');
+  console.log('  npx ts-node scripts/deploy/deploy-defender.ts GeniusDiamond polygon');
   console.log('  DEFENDER_AUTO_APPROVE=true npx ts-node scripts/deploy/deploy-defender.ts');
 }
 

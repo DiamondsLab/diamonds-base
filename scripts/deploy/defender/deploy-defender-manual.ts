@@ -2,7 +2,7 @@
 
 /**
  * Alternative deployment script for OpenZeppelin Defender that bypasses Hardhat account provider.  Connection information is hard coded.
- * Deploys Diamond contracts using DefenderDiamondDeployer with manual provider setup
+ * Deploys GNUS.AI Diamond contracts using DefenderDiamondDeployer with manual provider setup
  */
 
 import { DefenderDiamondDeployer, DefenderDiamondDeployerConfig } from '../../setup/DefenderDiamondDeployer';
@@ -31,19 +31,19 @@ async function setupManualProviderAndSigner(networkName: string) {
   
   switch (networkName) {
     case 'sepolia':
-      rpcUrl = process.env.SEPOLIA_RPC || 'https://eth-sepolia.g.alchemy.com/v2/Am1o01UUQ8B9zEjiPRg6iro-TfV6Os_m';
+      rpcUrl = process.env.SEPOLIA_RPC || 'https://eth-sepolia.g.alchemy.com/v2/<YOUR_ALCHEMY_API_KEY>';
       chainId = 11155111;
       break;
     case 'mainnet':
-      rpcUrl = process.env.MAINNET_RPC || '';
+      rpcUrl = process.env.MAINNET_RPC || 'https://eth-mainnet.g.alchemy.com/v2/<YOUR_ALCHEMY_API_KEY>';
       chainId = 1;
       break;
     case 'polygon':
-      rpcUrl = process.env.POLYGON_RPC || '';
+      rpcUrl = process.env.POLYGON_RPC || 'https://polygon-mainnet.g.alchemy.com/v2/<YOUR_ALCHEMY_API_KEY>';
       chainId = 137;
       break;
     case 'polygon_amoy':
-      rpcUrl = process.env.POLYGON_AMOY_RPC || '';
+      rpcUrl = process.env.POLYGON_AMOY_RPC || 'https://polygon-mumbai.g.alchemy.com/v2/<YOUR_ALCHEMY_API_KEY>';
       chainId = 80002;
       break;
     default:
@@ -94,7 +94,7 @@ async function main(): Promise<void> {
 
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const diamondName = args[0] || 'ExampleDiamond';
+  const diamondName = args[0] || 'GeniusDiamond';
   const networkName = args[1] || 'sepolia';
 
   // Validate network

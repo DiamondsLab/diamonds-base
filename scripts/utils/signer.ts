@@ -36,15 +36,15 @@ export async function setEtherBalance(address: string, amount: bigint) {
  * Updates the owner of the contract at the specified root address for testing purposes.
  * This involves transferring ownership from the current owner to the default signer in the Hardhat environment.
  *
- * @param rootAddress - The address of the root contract (e.g., GeniusOwnershipFacet).
+ * @param rootAddress - The address of the root contract (e.g., ExampleOwnershipFacet).
  * @returns The address of the old owner.
  */
 export const updateOwnerForTest = async (rootAddress: string) => {
   // Retrieve the current signer in the Hardhat environment
   const curOwner = (await ethers.getSigners())[0];
 
-  // Get a reference to the GeniusOwnershipFacet contract at the specified root address
-  const ownership = await ethers.getContractAt('GeniusOwnershipFacet', rootAddress) as GeniusOwnershipFacet;
+  // Get a reference to the ExampleOwnershipFacet contract at the specified root address
+  const ownership = await ethers.getContractAt('ExampleOwnershipFacet', rootAddress) as ExampleOwnershipFacet;
 
   // Retrieve the current owner of the contract
   const oldOwnerAddress = await ownership.owner();

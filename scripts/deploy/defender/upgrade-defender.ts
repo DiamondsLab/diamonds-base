@@ -31,7 +31,7 @@ async function main(): Promise<void> {
 
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const diamondName = args[0] || 'ExampleDiamond';
+  const diamondName = args[0] || 'GeniusDiamond';
   const networkName = args[1] || hre.network.name;
   const targetVersion = args[2];
 
@@ -159,7 +159,7 @@ function showUsage(): void {
   console.log('Usage: npx ts-node scripts/deploy/upgrade-defender.ts [DIAMOND_NAME] [NETWORK_NAME] [TARGET_VERSION]');
   console.log('');
   console.log('Arguments:');
-  console.log('  DIAMOND_NAME     Name of the diamond to upgrade (default: ExampleDiamond)');
+  console.log('  DIAMOND_NAME     Name of the diamond to upgrade (default: GeniusDiamond)');
   console.log('  NETWORK_NAME     Target network name (default: current network)');
   console.log('  TARGET_VERSION   Target version to upgrade to (default: latest)');
   console.log('');
@@ -176,7 +176,7 @@ function showUsage(): void {
   console.log('');
   console.log('Examples:');
   console.log('  npx ts-node scripts/deploy/upgrade-defender.ts');
-  console.log('  npx ts-node scripts/deploy/upgrade-defender.ts ExampleDiamond polygon 2.6');
+  console.log('  npx ts-node scripts/deploy/upgrade-defender.ts GeniusDiamond polygon 2.6');
   console.log('  DEFENDER_AUTO_APPROVE=true npx ts-node scripts/deploy/upgrade-defender.ts');
 }
 

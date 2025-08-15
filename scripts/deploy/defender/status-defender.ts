@@ -30,7 +30,7 @@ async function main(): Promise<void> {
 
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const diamondName = args[0] || 'ExampleDiamond';
+  const diamondName = args[0] || 'GeniusDiamond';
   const networkName = args[1] || hre.network.name;
   const proposalId = args[2];
 
@@ -217,7 +217,7 @@ function showUsage(): void {
   console.log('Usage: npx ts-node scripts/deploy/status-defender.ts [DIAMOND_NAME] [NETWORK_NAME] [PROPOSAL_ID]');
   console.log('');
   console.log('Arguments:');
-  console.log('  DIAMOND_NAME  Name of the diamond (default: ExampleDiamond)');
+  console.log('  DIAMOND_NAME  Name of the diamond (default: GeniusDiamond)');
   console.log('  NETWORK_NAME  Target network name (default: current network)');
   console.log('  PROPOSAL_ID   Specific proposal ID to monitor (optional)');
   console.log('');
@@ -232,9 +232,9 @@ function showUsage(): void {
   console.log('');
   console.log('Examples:');
   console.log('  npx ts-node scripts/deploy/status-defender.ts');
-  console.log('  npx ts-node scripts/deploy/status-defender.ts ExampleDiamond polygon');
-  console.log('  npx ts-node scripts/deploy/status-defender.ts ExampleDiamond polygon --watch');
-  console.log('  npx ts-node scripts/deploy/status-defender.ts ExampleDiamond polygon abc123 --watch --interval=30');
+  console.log('  npx ts-node scripts/deploy/status-defender.ts GeniusDiamond polygon');
+  console.log('  npx ts-node scripts/deploy/status-defender.ts GeniusDiamond polygon --watch');
+  console.log('  npx ts-node scripts/deploy/status-defender.ts GeniusDiamond polygon abc123 --watch --interval=30');
 }
 
 // Check for help flag

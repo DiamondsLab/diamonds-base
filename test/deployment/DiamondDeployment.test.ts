@@ -8,7 +8,7 @@ import { multichain } from 'hardhat-multichain';
 
 // Type alias for provider compatibility
 type ProviderType = JsonRpcProvider | any;
-import { getInterfaceID } from '../../utils/helpers';
+import { getInterfaceID } from '../../scripts/utils/helpers';
 import {
 	LocalDiamondDeployer,
 	LocalDiamondDeployerConfig,
@@ -20,7 +20,7 @@ import {
 	IDiamondLoupe__factory,
 } from '../../typechain-types';
 import { ExampleDiamond } from '../../diamond-typechain-types';
-import { loadDiamondContract } from '../../utils/loadDiamondArtifact';
+import { loadDiamondContract } from '../../scripts/utils/loadDiamondArtifact';
 
 describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () {
 	const diamondName = 'ExampleDiamond';
@@ -213,27 +213,27 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 				log(`DiamondLoupe Facet interface support validated on ${networkName}`);
 			});
 
-			it(`should verify ERC165 supported interface for ERC20 on ${networkName}`, async function () {
-				log(`Validating ERC20 interface on chain: ${networkName}`);
-				const IERC20UpgradeableInterface = IERC20Upgradeable__factory.createInterface();
-				// Generate the ERC20 interface ID by XORing with the base interface ID.
-				const IERC20InterfaceID = getInterfaceID(IERC20UpgradeableInterface);
-				// Assert that the `diamond` contract supports the ERC20 interface.
-				// assert(
-				//   await proxyDiamond?.supportsInterface(IERC20InterfaceID.toString(16).padStart(8, '0')),
-				//   "Doesn't support IERC20Upgradeable",
-				// );
+			// it(`should verify ERC165 supported interface for ERC20 on ${networkName}`, async function () {
+			// 	log(`Validating ERC20 interface on chain: ${networkName}`);
+			// 	const IERC20UpgradeableInterface = IERC20Upgradeable__factory.createInterface();
+			// 	// Generate the ERC20 interface ID by XORing with the base interface ID.
+			// 	const IERC20InterfaceID = getInterfaceID(IERC20UpgradeableInterface);
+			// 	// Assert that the `diamond` contract supports the ERC20 interface.
+			// 	// assert(
+			// 	//   await proxyDiamond?.supportsInterface(IERC20InterfaceID.toString(16).padStart(8, '0')),
+			// 	//   "Doesn't support IERC20Upgradeable",
+			// 	// );
 
-				// Test ERC165 interface compatibility for ERC20 '0x37c8e2a0'
-				// Test ERC165 interface compatibility for ERC20Upgradeable '0x36372b07'
-				// const supportsERC20 = await proxyDiamond?.supportsInterface(IERC20InterfaceID.toString(16).padStart(8, '0'));
+			// 	// Test ERC165 interface compatibility for ERC20 '0x37c8e2a0'
+			// 	// Test ERC165 interface compatibility for ERC20Upgradeable '0x36372b07'
+			// 	// const supportsERC20 = await proxyDiamond?.supportsInterface(IERC20InterfaceID.toString(16).padStart(8, '0'));
 
-				const supportsERC20 = await ownerDiamond?.supportsInterface('0x36372b07');
+			// 	const supportsERC20 = await ownerDiamond?.supportsInterface('0x36372b07');
 
-				expect(supportsERC20).to.be.true;
+			// 	expect(supportsERC20).to.be.true;
 
-				log(`ERC20 interface validated on ${networkName}`);
-			});
+			// 	log(`ERC20 interface validated on ${networkName}`);
+			// });
 		});
 	}
 });

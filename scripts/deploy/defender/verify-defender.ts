@@ -28,7 +28,7 @@ async function main(): Promise<void> {
 
   // Parse command line arguments
   const args = process.argv.slice(2);
-  const diamondName = args[0] || 'ExampleDiamond';
+  const diamondName = args[0] || 'GeniusDiamond';
   const networkName = args[1] || hre.network.name;
   const contractAddress = args[2];
 
@@ -166,7 +166,7 @@ function showUsage(): void {
   console.log('Usage: npx ts-node scripts/deploy/verify-defender.ts [DIAMOND_NAME] [NETWORK_NAME] [CONTRACT_ADDRESS]');
   console.log('');
   console.log('Arguments:');
-  console.log('  DIAMOND_NAME      Name of the diamond (default: ExampleDiamond)');
+  console.log('  DIAMOND_NAME      Name of the diamond (default: GeniusDiamond)');
   console.log('  NETWORK_NAME      Target network name (default: current network)');
   console.log('  CONTRACT_ADDRESS  Specific contract address to verify (optional)');
   console.log('');
@@ -178,8 +178,8 @@ function showUsage(): void {
   console.log('');
   console.log('Examples:');
   console.log('  npx ts-node scripts/deploy/verify-defender.ts');
-  console.log('  npx ts-node scripts/deploy/verify-defender.ts ExampleDiamond polygon');
-  console.log('  npx ts-node scripts/deploy/verify-defender.ts ExampleDiamond mainnet 0x123...abc');
+  console.log('  npx ts-node scripts/deploy/verify-defender.ts GeniusDiamond polygon');
+  console.log('  npx ts-node scripts/deploy/verify-defender.ts GeniusDiamond mainnet 0x123...abc');
 }
 
 // Check for help flag

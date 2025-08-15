@@ -36,7 +36,7 @@ async function main(networkDeployInfo: INetworkDeployInfo) {
   // Connect to the ExampleDiamond (ownership functions are part of the diamond)
   console.log(`Connecting to ExampleDiamond at: ${DiamondAddress}`);
   const ownershipFacet = (await ethers.getContractAt(
-    'GeniusOwnershipFacet',
+    'ExampleOwnershipFacet',
     DiamondAddress,
     deployerSigner,
   )) as unknown as ExampleDiamond;

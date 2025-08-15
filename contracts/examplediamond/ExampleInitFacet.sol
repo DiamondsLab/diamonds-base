@@ -12,7 +12,7 @@ import "@gnus.ai/contracts-upgradeable-diamond/token/ERC20/IERC20Upgradeable.sol
 /// @author Genius DAO
 /// @notice Handles initialization logic for the Diamond contract
 /// @dev Implements role-based access control and diamond storage initialization
-contract DiamondInitFacet is ContextUpgradeable, AccessControlEnumerableUpgradeable {
+contract ExampleInitFacet is ContextUpgradeable, AccessControlEnumerableUpgradeable {
     using LibDiamond for LibDiamond.DiamondStorage;
 
     /// @notice Role identifier for upgrade privileges

@@ -19,5 +19,6 @@ dist
 tmp
 notes
 
-diamonds-abi
+diamonds-abi/
 
+config/

@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { rmSync, existsSync, readFileSync } from 'fs';
-import { generateDiamondAbiWithTypechain } from '../../generate-diamond-abi-with-typechain';
+import { generateDiamondAbiWithTypechain } from '../../scripts/generate-diamond-abi-with-typechain';
 import { Interface } from 'ethers';
-import { DiamondAbiGenerationOptions } from '../../diamond-abi-generator';
+import { DiamondAbiGenerationOptions } from '../../scripts/diamond-abi-generator';
 import { join } from 'path';
 
 describe('Diamond ABI Integration Tests', () => {

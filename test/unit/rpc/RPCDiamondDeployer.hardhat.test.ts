@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { RPCDiamondDeployer } from "../../../../scripts/setup/RPCDiamondDeployer";
+import { RPCDiamondDeployer } from "../../../scripts/setup/RPCDiamondDeployer";
 import 'hardhat-diamonds';
 
 describe("RPCDiamondDeployer - Hardhat Integration", function () {
@@ -19,8 +19,8 @@ describe("RPCDiamondDeployer - Hardhat Integration", function () {
                 expect(diamondConfig).to.have.property('deploymentsPath');
                 expect(diamondConfig).to.have.property('contractsPath');
                 expect(diamondConfig.deploymentsPath).to.equal('diamonds');
-                // This should be updated to reflect the Diamonds contracts subdirectory
-                expect(diamondConfig.contractsPath).to.equal('contracts/');
+                // This should be updated to reflect the diamond contracts subdirectory
+                expect(diamondConfig.contractsPath).to.equal('contracts/examplediamond');
             } catch (error) {
                 expect.fail(`Failed to load diamond configuration: ${(error as Error).message}`);
             }
