@@ -17,7 +17,7 @@ To get started with this boilerplate, follow these steps:
 
 ```bash
 git clone https://github.com/your-username/diamonds-for-hardhat.git
-```
+```-
 
 2. Install dependencies:
 

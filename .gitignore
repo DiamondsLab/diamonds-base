@@ -19,6 +19,11 @@ dist
 tmp
 notes
 
-diamonds-abi/
+diamond-abi/
 
 config/
+test-diamonds
+diamond-typechain-types
+deployments
+test-output
+test-mocks
