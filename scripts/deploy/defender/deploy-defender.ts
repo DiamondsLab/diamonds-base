@@ -2,7 +2,7 @@
 
 /**
  * Main deployment script for OpenZeppelin Defender
- * Deploys GNUS.AI Diamond contracts using DefenderDiamondDeployer
+ * Deploys Example Diamond contracts using DefenderDiamondDeployer
  */
 
 import { DefenderDiamondDeployer, DefenderDiamondDeployerConfig } from '../../setup/DefenderDiamondDeployer';

@@ -2,7 +2,7 @@
 
 /**
  * Alternative deployment script for OpenZeppelin Defender that bypasses Hardhat account provider.  Connection information is hard coded.
- * Deploys GNUS.AI Diamond contracts using DefenderDiamondDeployer with manual provider setup
+ * Deploys Example Diamond contracts using DefenderDiamondDeployer with manual provider setup
  */
 
 import { DefenderDiamondDeployer, DefenderDiamondDeployerConfig } from '../../setup/DefenderDiamondDeployer';
