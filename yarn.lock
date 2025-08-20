@@ -4786,9 +4786,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"diamonds-boilerplate@workspace:.":
+"diamonds-base@workspace:.":
   version: 0.0.0-use.local
-  resolution: "diamonds-boilerplate@workspace:."
+  resolution: "diamonds-base@workspace:."
   dependencies:
     "@axelar-network/axelarjs-sdk": "npm:^0.15.0"
     "@axelar-network/interchain-token-service": "npm:^1.2.4"

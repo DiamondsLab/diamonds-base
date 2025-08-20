@@ -5,7 +5,7 @@
  * Deploys example Diamond contracts using RPCDiamondDeployer
  */
 
-import { RPCDiamondDeployer } from '../../setup/rpc/RPCDiamondDeployer';
+import { RPCDiamondDeployer } from '../../setup/RPCDiamondDeployer';
 import {
   DeploymentOptions,
   setupProgram,

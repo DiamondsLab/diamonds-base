@@ -4,7 +4,7 @@ import { join } from 'path';
 import { DiamondAbiGenerationOptions, generateDiamondAbi, ProjectDiamondAbiGenerator } from '../../scripts/diamond-abi-generator';
 
 describe('Diamond ABI Generator', () => {
-  const testOutputDir = './test-output/diamond-abi';
+  const testOutputDir = './test-assets/test-output/diamond-abi';
   const diamondName = 'ExampleDiamond';
 
   beforeEach(() => {
@@ -25,7 +25,7 @@ describe('Diamond ABI Generator', () => {
     // it('should create generator instance with default options', () => {
     //   const generator = new ProjectDiamondAbiGenerator({
     //     diamondName: 'TestDiamond',
-    //     diamondsPath: './test-diamonds',
+    //     diamondsPath: './test-assets/test-diamonds',
     //   });
       
     //   expect(generator).to.be.an('object');
@@ -134,7 +134,7 @@ describe('Diamond ABI Generator', () => {
         diamondName: 'NonExistentDiamond',
         outputDir: testOutputDir,
         verbose: true,
-        diamondsPath: './test-diamonds'
+        diamondsPath: './test-assets/test-diamonds'
       });
 
       expect(result).to.have.property('abi');
@@ -207,7 +207,7 @@ describe('Diamond ABI Generator', () => {
     //     diamondName: 'CompletelyInvalidDiamond',
     //     outputDir: testOutputDir,
     //     verbose: true,
-    //     diamondsPath: './test-diamonds'
+    //     diamondsPath: './test-assets/test-diamonds'
     //   });
 
     //   expect(result).to.have.property('abi');

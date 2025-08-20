@@ -47,7 +47,7 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 			// let signer2: string;
 			let owner: string;
 			let ownerSigner: SignerWithAddress;
-			let geniusDiamond: ExampleDiamond;
+			let exampleDiamond: ExampleDiamond;
 			// let signer0Diamond: ExampleDiamond;
 			// let signer1Diamond: ExampleDiamond;
 			// let signer2Diamond: ExampleDiamond;
@@ -70,14 +70,14 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 				diamond = await diamondDeployer.getDiamondDeployed();
 				const deployedDiamondData = diamond.getDeployedDiamondData();
 
-        let geniusDiamondPlain: ExampleDiamond;
+        let exampleDiamondPlain: ExampleDiamond;
         
         
-				let geniusDiamondContract: ExampleDiamond;
+				let exampleDiamondContract: ExampleDiamond;
 				
 				// Load the Diamond contract using the utility function
-				geniusDiamondContract = await loadDiamondContract<ExampleDiamond>(diamond, deployedDiamondData.DiamondAddress!);
-				geniusDiamond = geniusDiamondContract;
+				exampleDiamondContract = await loadDiamondContract<ExampleDiamond>(diamond, deployedDiamondData.DiamondAddress!);
+				exampleDiamond = exampleDiamondContract;
 
 				ethersMultichain = ethers;
 				ethersMultichain.provider = provider as any;
@@ -87,9 +87,9 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 				signer0 = signers[0].address;
 				// signer1 = signers[1].address;
 				// signer2 = signers[2].address;
-				// signer0Diamond = geniusDiamond.connect(signers[0]);
-				// signer1Diamond = geniusDiamond.connect(signers[1]);
-				// signer2Diamond = geniusDiamond.connect(signers[2]);
+				// signer0Diamond = exampleDiamond.connect(signers[0]);
+				// signer1Diamond = exampleDiamond.connect(signers[1]);
+				// signer2Diamond = exampleDiamond.connect(signers[2]);
 
 				// get the signer for the owner
 
@@ -101,7 +101,7 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 				}
 				ownerSigner = await ethersMultichain.getSigner(owner);
 
-				ownerDiamond = geniusDiamond.connect(ownerSigner);
+				ownerDiamond = exampleDiamond.connect(ownerSigner);
 			});
 
 			beforeEach(async function () {

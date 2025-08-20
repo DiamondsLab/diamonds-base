@@ -29,7 +29,7 @@ describe("RPCDiamondDeployer", function () {
             maxRetries: 3,
             retryDelayMs: 1000,
             verbose: false,
-            deploymentsPath: "./deployments-test",
+            deploymentsPath: "./test-assets/deployments-test",
             configFilePath: "diamonds/ExampleDiamond/examplediamond.config.json",
             writeDeployedDiamondData: true,
         };

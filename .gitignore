@@ -22,8 +22,7 @@ notes
 diamond-abi/
 
 config/
-test-diamonds
 diamond-typechain-types
 deployments
-test-output
+test-assets
 test-mocks

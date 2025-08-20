@@ -1,14 +1,15 @@
 {
-  "name": "diamonds-boilerplate",
+  "name": "diamonds-base",
   "version": "1.0.0",
-  "description": "ERC-2535 Diamond Proxy Standard Framework",
+  "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {
     "test": "npx hardhat test",
     "clean": "npx hardhat clean",
     "compile": "npx hardhat compile &&  npx ts-node scripts/generate-diamond-abi-with-typechain.ts",
+    "diamonds-clean": "rm -rf diamond-typechain-types diamond-abi && npx hardhat clean",
     "coverage": "npx hardhat coverage",
-    "build": "npx tsc && npx hardhat compile && npx ts-node scripts/generate-diamond-abi-with-typechain.ts",
+    "build": "npx hardhat compile && npx tsc && npx ts-node scripts/generate-diamond-abi-with-typechain.ts",
     "generate-diamond-abi": "npx ts-node scripts/diamond-abi-generator.ts",
     "generate-diamond-abi-typechain": "npx ts-node scripts/generate-diamond-abi-with-typechain.ts"
   },
