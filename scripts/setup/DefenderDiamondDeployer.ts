@@ -6,7 +6,7 @@ import {
   FileDeploymentRepository,
   OZDefenderDeploymentStrategy,
 } from '@diamondslab/diamonds';
-import '@diamondslabs/hardhat-diamonds';
+import '@diamondslab/hardhat-diamonds';
 import type { JsonRpcProvider } from '@ethersproject/providers';
 import type { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider';
 import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';

@@ -74,7 +74,7 @@
   ],
   "devDependencies": {
     "@diamondslab/diamonds": "^1.0.0",
-    "@diamondslab/hardhat-diamonds": "^1.1.0",
+    "@diamondslab/hardhat-diamonds": "^1.1.2",
     "@gnus.ai/contracts-upgradeable-diamond": "=4.5.0",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",
@@ -115,7 +115,6 @@
     "globals": "^15.14.0",
     "hardhat": "^2.26.2",
     "hardhat-abi-exporter": "^2.8.0",
-    "hardhat-diamonds": "https://github.com/GeniusVentures/hardhat-diamonds.git#develop",
     "hardhat-gas-reporter": "^1.0.8",
     "hardhat-multichain": "^1.0.4",
     "prettier": "^3.4.2",

@@ -606,14 +606,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@diamondslab/hardhat-diamonds@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "@diamondslab/hardhat-diamonds@npm:1.1.0"
+"@diamondslab/hardhat-diamonds@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "@diamondslab/hardhat-diamonds@npm:1.1.2"
   peerDependencies:
-    diamonds: ^1.0.0
+    "@diamondslab/diamonds": ^1.0.0
     ethers: ^6.0.0
     hardhat: ^2.0.0
-  checksum: 10c0/2d8d3acfe8570f700b3d5a3edc266f4720e272d6b3deb75346fa4d9a72a6afd4c3099dc55f08eeccdd282d10b4360f55476f5ee23890cab665088b05120bf835
+  checksum: 10c0/2bfad972ab69959e1fa2af8a734a55cfc8a7001a1f3820dfc0729677a5584798e00339aaa25bb68d758387e6011fddc34119239674c12fd42921a69e704a6685
   languageName: node
   linkType: hard
 
@@ -4435,7 +4435,7 @@ __metadata:
   resolution: "diamonds-base@workspace:."
   dependencies:
     "@diamondslab/diamonds": "npm:^1.0.0"
-    "@diamondslab/hardhat-diamonds": "npm:^1.1.0"
+    "@diamondslab/hardhat-diamonds": "npm:^1.1.2"
     "@gnus.ai/contracts-upgradeable-diamond": "npm:=4.5.0"
     "@nomicfoundation/hardhat-chai-matchers": "npm:^2.0.0"
     "@nomicfoundation/hardhat-ethers": "npm:^3.0.0"
@@ -4476,7 +4476,6 @@ __metadata:
     globals: "npm:^15.14.0"
     hardhat: "npm:^2.26.2"
     hardhat-abi-exporter: "npm:^2.8.0"
-    hardhat-diamonds: "https://github.com/GeniusVentures/hardhat-diamonds.git#develop"
     hardhat-gas-reporter: "npm:^1.0.8"
     hardhat-multichain: "npm:^1.0.4"
     prettier: "npm:^3.4.2"
@@ -5834,17 +5833,6 @@ __metadata:
   peerDependencies:
     hardhat: ^2.0.0
   checksum: 10c0/737e283c709d7f43827340a965f75866384d47f9cc5f9618b86e741a8f54d831d89f04ff681bc229984175b51763735a66b20b89f0949833d9d484e64cc90d90
-  languageName: node
-  linkType: hard
-
-"hardhat-diamonds@https://github.com/GeniusVentures/hardhat-diamonds.git#develop":
-  version: 1.0.0
-  resolution: "hardhat-diamonds@https://github.com/GeniusVentures/hardhat-diamonds.git#commit=443bdeab6b46f118e118cf234a8c3b9c4041a485"
-  peerDependencies:
-    diamonds: ^1.0.0
-    ethers: ^6.0.0
-    hardhat: ^2.0.0
-  checksum: 10c0/3a79884aa4ac8339a4bfec485450cbd28b847b93e9e0428b78db2cd17e6b011a18981e255354f6bbc783a0256e14fbc0cdecfbc0a8e29bdc1973efefe5ab096c
   languageName: node
   linkType: hard
 
