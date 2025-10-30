@@ -69,6 +69,9 @@
     "Am0rfu5"
   ],
   "license": "MIT",
+  "workspaces": [
+    ".devcontainer/"
+  ],
   "devDependencies": {
     "@axelar-network/axelarjs-sdk": "^0.15.0",
     "@axelar-network/interchain-token-service": "^1.2.4",
