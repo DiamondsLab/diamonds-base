@@ -1,6 +1,6 @@
 {
   "name": "diamonds-base",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {
@@ -17,6 +17,9 @@
     "Am0rfu5"
   ],
   "license": "MIT",
+  "workspaces": [
+    ".devcontainer/"
+  ],
   "devDependencies": {
     "@axelar-network/axelarjs-sdk": "^0.15.0",
     "@axelar-network/interchain-token-service": "^1.2.4",
