@@ -1,6 +1,6 @@
 {
   "name": "diamonds-base",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {
@@ -73,8 +73,6 @@
     ".devcontainer/"
   ],
   "devDependencies": {
-    "@axelar-network/axelarjs-sdk": "^0.15.0",
-    "@axelar-network/interchain-token-service": "^1.2.4",
     "@diamondslab/diamonds": "^1.0.0",
     "@diamondslab/hardhat-diamonds": "^1.1.0",
     "@gnus.ai/contracts-upgradeable-diamond": "=4.5.0",
@@ -106,7 +104,6 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "contracts-starter": "https://github.com/mudgen/diamond-2-hardhat.git",
-    "diamonds": "https://github.com/GeniusVentures/diamonds.git#develop",
     "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^9.1.0",

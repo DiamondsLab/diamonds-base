@@ -1,7 +1,7 @@
-import { ethers } from 'hardhat';
+import { Diamond } from '@diamondslab/diamonds';
 import * as fs from 'fs';
+import { ethers } from 'hardhat';
 import * as path from 'path';
-import { Diamond } from 'diamonds';
 
 /**
  * Loads a Diamond contract instance using the generated Diamond ABI.

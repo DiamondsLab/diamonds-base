@@ -1,26 +1,24 @@
-import { debug } from 'debug';
-import { expect } from 'chai';
-import { ethers } from 'hardhat';
-import hre from 'hardhat';
+import { Diamond } from '@diamondslab/diamonds';
 import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';
+import { expect } from 'chai';
+import { debug } from 'debug';
 import { JsonRpcProvider } from 'ethers';
+import hre, { ethers } from 'hardhat';
 import { multichain } from 'hardhat-multichain';
+import { ExampleDiamond } from '../../diamond-typechain-types';
+import {
+  LocalDiamondDeployer,
+  LocalDiamondDeployerConfig,
+} from '../../scripts/setup/LocalDiamondDeployer';
+import { getInterfaceID } from '../../scripts/utils/helpers';
+import { loadDiamondContract } from '../../scripts/utils/loadDiamondArtifact';
+import {
+  IDiamondCut__factory,
+  IDiamondLoupe__factory
+} from '../../typechain-types';
 
 // Type alias for provider compatibility
 type ProviderType = JsonRpcProvider | any;
-import { getInterfaceID } from '../../scripts/utils/helpers';
-import {
-	LocalDiamondDeployer,
-	LocalDiamondDeployerConfig,
-} from '../../scripts/setup/LocalDiamondDeployer';
-import { Diamond, deleteDeployInfo } from 'diamonds';
-import {
-	IERC20Upgradeable__factory,
-	IDiamondCut__factory,
-	IDiamondLoupe__factory,
-} from '../../typechain-types';
-import { ExampleDiamond } from '../../diamond-typechain-types';
-import { loadDiamondContract } from '../../scripts/utils/loadDiamondArtifact';
 
 describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () {
 	const diamondName = 'ExampleDiamond';

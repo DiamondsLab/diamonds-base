@@ -1,27 +1,23 @@
 import {
-	Diamond,
-	DiamondDeployer,
-	DeploymentManager,
-	LocalDeploymentStrategy,
-	FileDeploymentRepository,
-	DeploymentRepository,
-	impersonateSigner,
-	setEtherBalance,
-	DiamondConfig,
-	DiamondPathsConfig,
-	cutKey,
-	impersonateAndFundSigner,
-} from 'diamonds';
+  DeploymentRepository,
+  Diamond,
+  DiamondConfig,
+  DiamondDeployer,
+  DiamondPathsConfig,
+  FileDeploymentRepository,
+  LocalDeploymentStrategy,
+  cutKey,
+  impersonateAndFundSigner
+} from '@diamondslab/diamonds';
+import '@diamondslab/hardhat-diamonds';
 import type { JsonRpcProvider } from '@ethersproject/providers';
-import { ethers } from 'hardhat';
-import hre from 'hardhat';
 import type { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider';
 import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';
+import hre, { ethers } from 'hardhat';
 import { join } from 'path';
-import 'hardhat-diamonds';
 
-import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 import { DiamondAbiGenerationOptions } from '../diamond-abi-generator';
+import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 
 export interface LocalDiamondDeployerConfig extends DiamondConfig {
 	provider?: JsonRpcProvider | HardhatEthersProvider;

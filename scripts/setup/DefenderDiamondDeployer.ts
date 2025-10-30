@@ -1,23 +1,22 @@
 import {
-	Diamond,
-	DiamondDeployer,
-	FileDeploymentRepository,
-	DeploymentRepository,
-	DiamondConfig,
-	OZDefenderDeploymentStrategy,
-} from 'diamonds';
+  DeploymentRepository,
+  Diamond,
+  DiamondConfig,
+  DiamondDeployer,
+  FileDeploymentRepository,
+  OZDefenderDeploymentStrategy,
+} from '@diamondslab/diamonds';
+import '@diamondslabs/hardhat-diamonds';
 import type { JsonRpcProvider } from '@ethersproject/providers';
-import { ethers } from 'hardhat';
-import hre from 'hardhat';
 import type { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider';
 import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';
-import { join } from 'path';
-import { readFileSync, existsSync } from 'fs';
-import 'hardhat-diamonds';
 import * as dotenv from 'dotenv';
+import { existsSync, readFileSync } from 'fs';
+import hre, { ethers } from 'hardhat';
+import { join } from 'path';
 
-import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 import { DiamondAbiGenerationOptions } from '../diamond-abi-generator';
+import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 
 dotenv.config();
 

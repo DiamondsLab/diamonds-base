@@ -1,28 +1,26 @@
 import {
-	Diamond,
-	DiamondDeployer,
-	FileDeploymentRepository,
-	DeploymentRepository,
-	DiamondConfig,
-	DiamondPathsConfig,
-	RPCDeploymentStrategy,
-	cutKey,
-} from 'diamonds';
-import { JsonRpcProvider } from 'ethers';
-import { ethers } from 'hardhat';
-import hre from 'hardhat';
+  DeploymentRepository,
+  Diamond,
+  DiamondConfig,
+  DiamondDeployer,
+  DiamondPathsConfig,
+  FileDeploymentRepository,
+  RPCDeploymentStrategy,
+  cutKey,
+} from '@diamondslab/diamonds';
+import '@diamondslab/hardhat-diamonds';
 import type { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider';
 import { SignerWithAddress } from '@nomicfoundation/hardhat-ethers/signers';
-import { join } from 'path';
-import { readFileSync, existsSync } from 'fs';
-import 'hardhat-diamonds';
-import 'hardhat-multichain';
-import type { HardhatUserConfig } from 'hardhat/types';
-import * as dotenv from 'dotenv';
 import chalk from 'chalk';
+import * as dotenv from 'dotenv';
+import { JsonRpcProvider } from 'ethers';
+import { existsSync } from 'fs';
+import hre, { ethers } from 'hardhat';
+import 'hardhat-multichain';
+import { join } from 'path';
 
-import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 import { DiamondAbiGenerationOptions } from '../diamond-abi-generator';
+import { generateDiamondAbiWithTypechain } from '../generate-diamond-abi-with-typechain';
 
 dotenv.config();
 

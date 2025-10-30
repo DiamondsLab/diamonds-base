@@ -1,7 +1,7 @@
-import { Diamond, FileDeploymentRepository, DiamondAbiGenerator } from 'diamonds';
-import { join } from 'path';
-import { writeFileSync, existsSync, mkdirSync, readFileSync } from 'fs';
+import { Diamond, DiamondAbiGenerator, FileDeploymentRepository } from '@diamondslab/diamonds';
 import chalk from 'chalk';
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { join } from 'path';
 
 /**
  * Options for diamond ABI generation

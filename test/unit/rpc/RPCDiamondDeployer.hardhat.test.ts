@@ -1,6 +1,7 @@
+import '@diamondslab/diamonds';
+import '@diamondslab/hardhat-diamonds';
 import { expect } from 'chai';
 import { RPCDiamondDeployer } from '../../../scripts/setup/RPCDiamondDeployer';
-import 'hardhat-diamonds';
 
 describe('RPCDiamondDeployer - Hardhat Integration', function () {
 	this.timeout(60000);
