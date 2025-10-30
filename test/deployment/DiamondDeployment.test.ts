@@ -70,13 +70,15 @@ describe('🧪 Multichain Fork and Diamond Deployment Tests', async function () 
 				diamond = await diamondDeployer.getDiamondDeployed();
 				const deployedDiamondData = diamond.getDeployedDiamondData();
 
-        let exampleDiamondPlain: ExampleDiamond;
-        
-        
+				let exampleDiamondPlain: ExampleDiamond;
+
 				let exampleDiamondContract: ExampleDiamond;
-				
+
 				// Load the Diamond contract using the utility function
-				exampleDiamondContract = await loadDiamondContract<ExampleDiamond>(diamond, deployedDiamondData.DiamondAddress!);
+				exampleDiamondContract = await loadDiamondContract<ExampleDiamond>(
+					diamond,
+					deployedDiamondData.DiamondAddress!,
+				);
 				exampleDiamond = exampleDiamondContract;
 
 				ethersMultichain = ethers;
