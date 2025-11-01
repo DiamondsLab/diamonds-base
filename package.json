@@ -1,13 +1,13 @@
 {
   "name": "diamonds-base",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {
     "test": "npx hardhat test",
     "clean": "rm -rf artifacts/* cache/* diamond-abi/* typechain-types/* diamond-typechain-types/*",
-    "build": "yarn clean-compile && npx tsc",
-    "compile": "npx hardhat compile && yarn diamond:generate-proxy-abi-typechain && yarn diamond:generate-gnus-abi-typechain",
+    "build": "npx tsc",
+    "compile": "npx hardhat compile && yarn diamond:generate-abi-typechain",
     "diamonds-clean": "rm -rf diamond-typechain-types diamond-abi && npx hardhat clean",
     "coverage": "npx hardhat coverage",
     "clean-compile": "yarn clean && yarn compile",

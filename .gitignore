@@ -26,3 +26,5 @@ diamond-typechain-types
 deployments
 test-assets
 test-mocks
+.yarn/
+dist/
