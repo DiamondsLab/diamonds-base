@@ -140,9 +140,17 @@ async function main(): Promise<void> {
 		console.log(`Diamond Name: ${diamondName}`);
 		console.log(`Network: ${networkName} (Chain ID: ${config.chainId})`);
 		console.log(`Verification Time: ${verificationTime}s`);
+    
+    // This rejects inputs like "../secrets" or absolute/relative paths.
+		const sanitizedNetworkName = String(networkName).trim();
+		if (!/^[a-zA-Z0-9_-]+$/.test(sanitizedNetworkName)) {
+			throw new Error(
+				`Invalid network name: "${networkName}". Only letters, numbers, '-' and '_' are allowed.`,
+			);
+		}
 
 		// Show verification links
-		const networkConfig = DefenderDiamondDeployer.loadNetworkConfig(networkName);
+		const networkConfig = DefenderDiamondDeployer.loadNetworkConfig(sanitizedNetworkName);
 		console.log(`Block Explorer: ${networkConfig.blockExplorer}/address/${targetAddress}`);
 
 		console.log('');
