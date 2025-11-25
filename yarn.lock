@@ -606,9 +606,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@diamondslab/diamonds@npm:^1.0.0":
-  version: 1.1.2
-  resolution: "@diamondslab/diamonds@npm:1.1.2"
+"@diamondslab/diamonds@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@diamondslab/diamonds@npm:1.2.1"
   dependencies:
     "@ethersproject/abstract-signer": "npm:^5.8.0"
     axios: "npm:^1.12.0"
@@ -622,18 +622,20 @@ __metadata:
     typescript: ^5.0.0
   bin:
     diamond-abi: dist/scripts/diamond-abi-cli.js
-  checksum: 10c0/d3019aaca32ae14218c5d19e8cde4fa56db1f3529ac38538961d0bb1b828b557b3e58f1dfc23942c85e446ee7d4e037d49231604a4bb15421fb469c857542165
+  checksum: 10c0/0bb43d3b8d5aaf893f7001ef51fafc2b7e0c60b2eb82e4c1fa54df2191ab3e334085834ad113d3b33dc755f1987ad43504bdc1785e1ba86d526013004634e34a
   languageName: node
   linkType: hard
 
-"@diamondslab/hardhat-diamonds@npm:^1.1.2":
-  version: 1.1.6
-  resolution: "@diamondslab/hardhat-diamonds@npm:1.1.6"
+"@diamondslab/hardhat-diamonds@npm:^1.1.8":
+  version: 1.1.8
+  resolution: "@diamondslab/hardhat-diamonds@npm:1.1.8"
+  dependencies:
+    chalk: "npm:^5.6.2"
   peerDependencies:
     "@diamondslab/diamonds": ^1.0.0
     ethers: ^6.0.0
     hardhat: ^2.0.0
-  checksum: 10c0/6860b20b97b7f4ec37c21fda75a13ccbd599ab7f9df6883023824d8bea74575e65b8a66d69b3c4733da45c7d778fb19f7aa9ea75873df9e244f324a8a1f2d592
+  checksum: 10c0/25137803187bbd06645d5e6801ae5cecd0d5c7f84e13b06a64da85bf3762b98773df4634e117cdb2ffb52bd445a2ee7075e0ee36ca4af51935f8bb498c95663b
   languageName: node
   linkType: hard
 
@@ -3976,6 +3978,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"chalk@npm:^5.6.2":
+  version: 5.6.2
+  resolution: "chalk@npm:5.6.2"
+  checksum: 10c0/99a4b0f0e7991796b1e7e3f52dceb9137cae2a9dfc8fc0784a550dc4c558e15ab32ed70b14b21b52beb2679b4892b41a0aa44249bcb996f01e125d58477c6976
+  languageName: node
+  linkType: hard
+
 "charenc@npm:>= 0.0.1":
   version: 0.0.2
   resolution: "charenc@npm:0.0.2"
@@ -4464,9 +4473,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "diamonds-base@workspace:."
   dependencies:
-    "@diamondslab/diamonds": "npm:^1.0.0"
+    "@diamondslab/diamonds": "npm:^1.2.1"
     "@diamondslab/diamonds-monitor": "npm:^1.0.1"
-    "@diamondslab/hardhat-diamonds": "npm:^1.1.2"
+    "@diamondslab/hardhat-diamonds": "npm:^1.1.8"
     "@gnus.ai/contracts-upgradeable-diamond": "npm:=4.5.0"
     "@nomicfoundation/hardhat-chai-matchers": "npm:^2.0.0"
     "@nomicfoundation/hardhat-ethers": "npm:^3.0.0"
