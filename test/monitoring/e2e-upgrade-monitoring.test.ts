@@ -200,7 +200,7 @@ describe('🔄 Upgrade Monitoring Integration Tests', function () {
 		});
 
 		it('should analyze upgrade impact in real-time', async function () {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/prefer-nullish-coalescing
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const upgradeEvents = (this as any).upgradeEvents || [];
 
 			if (upgradeEvents.length === 0) {
@@ -341,7 +341,7 @@ describe('🔄 Upgrade Monitoring Integration Tests', function () {
 		});
 
 		it('should document upgrade completion', async function () {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/prefer-nullish-coalescing
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const upgradeEvents = (this as any).upgradeEvents || [];
 
 			const upgradeReport = {
@@ -366,7 +366,7 @@ describe('🔄 Upgrade Monitoring Integration Tests', function () {
 
 	describe('🔄 Rollback Detection', () => {
 		it('should detect potential rollback scenarios', async function () {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/prefer-nullish-coalescing
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const upgradeEvents = (this as any).upgradeEvents || [];
 			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const preState = (this as any).preUpgradeState;
@@ -393,7 +393,7 @@ describe('🔄 Upgrade Monitoring Integration Tests', function () {
 		});
 
 		it('should monitor for remove/replace actions indicating rollback', async function () {
-			// eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/prefer-nullish-coalescing
+			// eslint-disable-next-line @typescript-eslint/no-explicit-any
 			const upgradeEvents = (this as any).upgradeEvents || [];
 
 			if (upgradeEvents.length === 0) {

@@ -1,12 +1,12 @@
 import {
-  DeploymentRepository,
-  Diamond,
-  DiamondConfig,
-  DiamondDeployer,
-  DiamondPathsConfig,
-  FileDeploymentRepository,
-  RPCDeploymentStrategy,
-  cutKey,
+	DeploymentRepository,
+	Diamond,
+	DiamondConfig,
+	DiamondDeployer,
+	DiamondPathsConfig,
+	FileDeploymentRepository,
+	RPCDeploymentStrategy,
+	cutKey,
 } from '@diamondslab/diamonds';
 import '@diamondslab/hardhat-diamonds';
 import type { HardhatEthersProvider } from '@nomicfoundation/hardhat-ethers/internal/hardhat-ethers-provider';

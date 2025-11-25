@@ -1,6 +1,6 @@
 {
   "name": "diamonds-base",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {

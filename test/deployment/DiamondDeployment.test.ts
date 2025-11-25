@@ -7,15 +7,12 @@ import hre, { ethers } from 'hardhat';
 import { multichain } from 'hardhat-multichain';
 import { ExampleDiamond } from '../../diamond-typechain-types';
 import {
-  LocalDiamondDeployer,
-  LocalDiamondDeployerConfig,
+	LocalDiamondDeployer,
+	LocalDiamondDeployerConfig,
 } from '../../scripts/setup/LocalDiamondDeployer';
 import { getInterfaceID } from '../../scripts/utils/helpers';
 import { loadDiamondContract } from '../../scripts/utils/loadDiamondArtifact';
-import {
-  IDiamondCut__factory,
-  IDiamondLoupe__factory
-} from '../../typechain-types';
+import { IDiamondCut__factory, IDiamondLoupe__factory } from '../../typechain-types';
 
 // Type alias for provider compatibility
 type ProviderType = JsonRpcProvider | any;

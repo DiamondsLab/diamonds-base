@@ -1,4 +1,8 @@
-import { Diamond, DiamondAbiGenerator, FileDeploymentRepository } from '@diamondslab/diamonds';
+import {
+	Diamond,
+	DiamondAbiGenerator,
+	FileDeploymentRepository,
+} from '@diamondslab/diamonds';
 import chalk from 'chalk';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';

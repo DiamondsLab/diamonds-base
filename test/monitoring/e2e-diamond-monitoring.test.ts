@@ -68,8 +68,8 @@ describe('🔄 End-to-End Diamond Deployment and Monitoring', function () {
 			// Start monitoring
 			const eventEmitter = monitor.trackEvents();
 
-			let facetChangeEvents: any[] = [];
-			let healthIssues: any[] = [];
+			const facetChangeEvents: any[] = [];
+			const healthIssues: any[] = [];
 
 			eventEmitter.on('facetChanged', (event) => {
 				facetChangeEvents.push(event);
