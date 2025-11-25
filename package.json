@@ -74,6 +74,7 @@
   ],
   "devDependencies": {
     "@diamondslab/diamonds": "^1.0.0",
+    "@diamondslab/diamonds-monitor": "^1.0.1",
     "@diamondslab/hardhat-diamonds": "^1.1.2",
     "@gnus.ai/contracts-upgradeable-diamond": "=4.5.0",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",

@@ -593,6 +593,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@diamondslab/diamonds-monitor@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@diamondslab/diamonds-monitor@npm:1.0.1"
+  dependencies:
+    ethers: "npm:^6.4.0"
+    winston: "npm:^3.17.0"
+  peerDependencies:
+    diamonds: "*"
+    ethers: ^6.0.0
+  checksum: 10c0/f2012e6f2f6025229f03398e0c2d331d748f57ab9c8b21bc9f94ed01e76f79ce83f71816515ed474f177722bf94c6e1fc51f66dd51cf96edd3db587da6e4d0df
+  languageName: node
+  linkType: hard
+
 "@diamondslab/diamonds@npm:^1.0.0":
   version: 1.1.2
   resolution: "@diamondslab/diamonds@npm:1.1.2"
@@ -4452,6 +4465,7 @@ __metadata:
   resolution: "diamonds-base@workspace:."
   dependencies:
     "@diamondslab/diamonds": "npm:^1.0.0"
+    "@diamondslab/diamonds-monitor": "npm:^1.0.1"
     "@diamondslab/hardhat-diamonds": "npm:^1.1.2"
     "@gnus.ai/contracts-upgradeable-diamond": "npm:=4.5.0"
     "@nomicfoundation/hardhat-chai-matchers": "npm:^2.0.0"
