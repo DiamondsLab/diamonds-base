@@ -1,10 +1,10 @@
 import {
-  DeploymentRepository,
-  Diamond,
-  DiamondConfig,
-  DiamondDeployer,
-  FileDeploymentRepository,
-  OZDefenderDeploymentStrategy,
+	DeploymentRepository,
+	Diamond,
+	DiamondConfig,
+	DiamondDeployer,
+	FileDeploymentRepository,
+	OZDefenderDeploymentStrategy,
 } from '@diamondslab/diamonds';
 import '@diamondslab/hardhat-diamonds';
 import type { JsonRpcProvider } from '@ethersproject/providers';

@@ -140,8 +140,8 @@ async function main(): Promise<void> {
 		console.log(`Diamond Name: ${diamondName}`);
 		console.log(`Network: ${networkName} (Chain ID: ${config.chainId})`);
 		console.log(`Verification Time: ${verificationTime}s`);
-    
-    // This rejects inputs like "../secrets" or absolute/relative paths.
+
+		// This rejects inputs like "../secrets" or absolute/relative paths.
 		const sanitizedNetworkName = String(networkName).trim();
 		if (!/^[a-zA-Z0-9_-]+$/.test(sanitizedNetworkName)) {
 			throw new Error(

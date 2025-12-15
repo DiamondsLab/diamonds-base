@@ -1,6 +1,6 @@
 {
   "name": "diamonds-base",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "ERC-2535 Diamond Proxy Standard Base Project",
   "main": "index.ts",
   "scripts": {
@@ -73,8 +73,9 @@
     ".devcontainer/"
   ],
   "devDependencies": {
-    "@diamondslab/diamonds": "^1.0.0",
-    "@diamondslab/hardhat-diamonds": "^1.1.2",
+    "@diamondslab/diamonds": "^1.2.1",
+    "@diamondslab/diamonds-monitor": "^1.0.2",
+    "@diamondslab/hardhat-diamonds": "^1.1.8",
     "@gnus.ai/contracts-upgradeable-diamond": "=4.5.0",
     "@nomicfoundation/hardhat-chai-matchers": "^2.0.0",
     "@nomicfoundation/hardhat-ethers": "^3.0.0",

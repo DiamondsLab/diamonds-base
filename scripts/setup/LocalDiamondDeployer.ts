@@ -1,13 +1,13 @@
 import {
-  DeploymentRepository,
-  Diamond,
-  DiamondConfig,
-  DiamondDeployer,
-  DiamondPathsConfig,
-  FileDeploymentRepository,
-  LocalDeploymentStrategy,
-  cutKey,
-  impersonateAndFundSigner
+	DeploymentRepository,
+	Diamond,
+	DiamondConfig,
+	DiamondDeployer,
+	DiamondPathsConfig,
+	FileDeploymentRepository,
+	LocalDeploymentStrategy,
+	cutKey,
+	impersonateAndFundSigner,
 } from '@diamondslab/diamonds';
 import '@diamondslab/hardhat-diamonds';
 import type { JsonRpcProvider } from '@ethersproject/providers';
