@@ -345,13 +345,37 @@ npx ts-node scripts/deploy/rpc/verify-rpc.ts ExampleDiamond sepolia \
 
 ### Common Issues
 
-1. **"Module not found" errors**
+1. **"HardhatError: HH5: HardhatContext is not created"**
+
+   **Cause:** Running with `ts-node` instead of through Hardhat runtime. The `RPCDiamondDeployer` imports `hre` and `ethers` from `hardhat`, which requires Hardhat's runtime to be active.
+   
+   **Solution (Recommended):** Use the Hardhat wrapper script:
+   ```bash
+   DIAMOND_NAME=ExampleDiamond npx hardhat run scripts/deploy/rpc/hardhat-run-deploy-rpc.ts --network sepolia
+   ```
+   
+   **Alternative Solution:** Use legacy mode with explicit RPC URL:
+   ```bash
+   npx ts-node scripts/deploy/rpc/deploy-rpc.ts ExampleDiamond sepolia \
+     --no-use-hardhat-config \
+     --rpc-url https://sepolia.infura.io/v3/YOUR_KEY
+   ```
+
+2. **"Network not found in hardhat chainManager"**
+
+   **Cause:** Network not configured in `hardhat.config.ts`.
+   
+   **Solutions:**
+   - Add network to `hardhat.config.ts` chainManager configuration
+   - Use legacy mode with explicit RPC URL (see issue #1 alternative)
+
+3. **"Module not found" errors**
 
    ```bash
    npm install  # Ensure dependencies are installed
    ```
 
-2. **RPC connection issues**
+4. **RPC connection issues**
 
    ```bash
    # Check RPC URL and API key
@@ -360,14 +384,14 @@ npx ts-node scripts/deploy/rpc/verify-rpc.ts ExampleDiamond sepolia \
         $RPC_URL
    ```
 
-3. **Insufficient gas errors**
+5. **Insufficient gas errors**
 
    ```bash
    # Increase gas multiplier
    --gas-multiplier 2.0
    ```
 
-4. **Previous deployment exists**
+6. **Previous deployment exists**
 
    ```bash
    # Use force flag or clean deployments
